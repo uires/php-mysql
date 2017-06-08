@@ -1,9 +1,19 @@
 <html>
+<head>
+	<title>Minha Loja</title>
 	<meta charset="UTF-8">
-	<form action="adiciona-produto.php">
-		Nome: <input type="text" name="nome"/><br>
-		Preço: <input type="number" name="preco"/><br>
+	<link href="css/bootstrap.css" rel= "stylesheet" />
+	<link href="css/loja.css" rel= "stylesheet"/>
+</head>
 
-		<input type="submit" name="Cadastrar"/>
-	</form>
+
+	<body>
+
+		<form action="adiciona-produto.php">
+			Nome: <input type="text" name="nome"/><br>
+			Preço: <input type="number" name="preco"/><br>
+
+			<input type="submit" name="Cadastrar"/>
+		</form>
+	</body>
 </html>
