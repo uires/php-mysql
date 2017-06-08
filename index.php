@@ -1,4 +1,3 @@
 <html>
-<?php $nome = "Uires"; ?>
-Loja do <?php echo $nome; ?>
+	<h1>Bem vindo!</h1>
 </html>
