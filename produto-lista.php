@@ -4,8 +4,20 @@
 
 <?php include("cabecalho.php"); ?>
 <?php include("conecta.php"); ?>
+<?php
+function buscarProdutos($conexaoComOBancoDeDados, $query, $produtosBuscados){
+	$query =  mysqli_query($conexaoComOBancoDeDados, "select * from produtos");
+	while($produtosBuscados = mysqli_fetch_assoc($query){
+		
+
+	}
+	return echo $produtosBuscados['nome'] . " R$" . $produtosBuscados['preco'] . "</br>";
+
+}
 
 
+
+?>
 
 <?php
 
