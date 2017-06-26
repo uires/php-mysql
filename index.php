@@ -1,5 +1,6 @@
 <?php include("cabecalho.php"); ?>
-	<h1>Bem vindo!</h1>
+	<link href="loja.css" rel="stylesheet">
+	<h1 class>Bem vindo!</h1>
 
 <?php include("rodape.php"); ?>
 	       	

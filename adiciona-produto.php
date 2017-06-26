@@ -1,20 +1,32 @@
+<?php include("cabecalho.php"); ?>
+<?php include("conecta.php")?>
+	<link href="loja.css" rel="stylesheet">
+
+
 <?php
-include("cabecalho.php");
+
+function insereProduto($conexaoComOBancoDeDados, $nome, $preco){
+	$query = "insert into produtos (nome, preco) value ('{$nome}', {$preco})";
+	return mysqli_query($conexaoComOBancoDeDados, $query);
+}
+
 
 $nome = $_GET["nome"];
 $preco = $_GET["preco"];
 
-$query = "insert into produtos (nome, preco) values ('{$nome}', {$preco})";
-$conexao = mysqli_connect('localhost', 'root', '', 'loja');
 
-if(mysqli_query($conexao, $query)) {
+
+
+if(insereProduto($conexaoComOBancoDeDados, $nome, $preco)) { ?>
+	<p class="text-success">O produto <?= $nome ?>, com o preço de R$ <?= $preco ?> foi adicionando com sucesso.</p>
+<?php } else { 
+	$mensagemErroMySql = mysqli_error($conexaoComOBancoDeDados);
 ?>
-<p class="alert-success">Produto <?= $nome; ?>, <?= $preco; ?> adicionado com sucesso!</p>
-<?php
-} else {
-?>
-<p class="alert-danger">O produto <? = $nome; ?> não foi adicionado</p>
+	<p class="text-danger">O produto <?= $nome ?> não foi adicionando:<br> <?= $mensagemErroMySql ?> </p>
 <?php
 }
 
 ?>
+
+
+<?php include("rodape.php"); ?>
