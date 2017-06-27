@@ -5,6 +5,7 @@
 
 
 <?php
+// @uthor: uíres
 
 
 $nome = $_GET["nome"];

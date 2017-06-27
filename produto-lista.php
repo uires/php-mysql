@@ -5,9 +5,9 @@
 <?php include("cabecalho.php");
  include("conecta.php"); 
  include("banco-produtos.php");
+// @uthor: uíres
 
-
-
+ 
 
 $produtos = buscarProdutos($conexaoComOBancoDeDados);
 ?>
@@ -19,8 +19,11 @@ $produtos = buscarProdutos($conexaoComOBancoDeDados);
 		<tr>
 			<td><?=$produto['nome']?> </td>
 			<td>R$ <?=$produto['preco']?> </td>
-
 			<td>ID: <?=$produto['id']?> </td>
+
+			<td class="danger">  
+				<a href="remove-produto.php?id=<?=$produto['id']?>" class="text-danger">Removedor</a>
+			</td>
 		</tr>
 <?php 
 	}

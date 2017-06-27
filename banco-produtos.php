@@ -1,4 +1,5 @@
 <?php
+// @uthor: uíres
 function buscarProdutos($conexaoComOBancoDeDados){
 	$produtos = array();
 	$resultado =  mysqli_query($conexaoComOBancoDeDados, "select * from produtos");
@@ -14,5 +15,11 @@ function buscarProdutos($conexaoComOBancoDeDados){
 
 function insereProduto($conexaoComOBancoDeDados, $nome, $preco){
 	$query = "insert into produtos (nome, preco) value ('{$nome}', {$preco})";
+	return mysqli_query($conexaoComOBancoDeDados, $query);
+} 
+
+
+function removeProduto($conexaoComOBancoDeDados, $id){
+	$query= "delete from produtos where id = {$id}";
 	return mysqli_query($conexaoComOBancoDeDados, $query);
 } ?>
