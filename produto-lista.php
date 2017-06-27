@@ -2,29 +2,30 @@
 	<meta charset="UTF-8">
 </html>
 
-<?php include("cabecalho.php"); ?>
-<?php include("conecta.php"); ?>
+<?php include("cabecalho.php");
+ include("conecta.php"); 
+ include("banco-produtos.php");
 
-<?php
 
-function buscarProdutos($conexaoComOBancoDeDados){
-	$produtos = array();
-	$resultado =  mysqli_query($conexaoComOBancoDeDados, "select * from produtos");
-
-	while($produto = mysqli_fetch_assoc($resultado)){
-		array_push($produtos, $produto);
-	}
-
-	return $produtos;
-
-}
 
 
 $produtos = buscarProdutos($conexaoComOBancoDeDados);
-foreach($produtos as $produto) {
-    echo $produto['nome'] . "<br/>";
-}
+?>
+
+<table class="table table-striped table-bordered">
+<?php
+	foreach($produtos as $produto) {
+?>
+		<tr>
+			<td><?=$produto['nome']?> </td>
+			<td>R$ <?=$produto['preco']?> </td>
+
+			<td>ID: <?=$produto['id']?> </td>
+		</tr>
+<?php 
+	}
 
 ?>
+</table>
 
 <?php include("rodape.php"); ?>

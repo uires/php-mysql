@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>BBI-3</title>
+    <title>BB-3 </title>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="loja.css" rel="stylesheet" />
