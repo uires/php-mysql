@@ -2,7 +2,7 @@
 	<link href="loja.css" rel="stylesheet">
 
     <h1>[Formulário(ITENS)]</h1>
-	<form action="adiciona-produto.php">
+	<form action="adiciona-produto.php" method="post">
 		<table class="table">
     		<tr>
 		        <td><h5>Nome</h5></td>
