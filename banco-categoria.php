@@ -2,6 +2,7 @@
 include("conecta.php");
 
 // @author: uíres
+
 function listaCategorias($conexaoComOBancoDeDados) {
     $categorias = array();
     $query = "select * from categorias";
@@ -11,9 +12,6 @@ function listaCategorias($conexaoComOBancoDeDados) {
     }
     return $categorias;
 }
-
-
-
 
 
 
