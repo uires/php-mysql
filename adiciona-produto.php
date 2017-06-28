@@ -11,11 +11,12 @@
 $nome = $_POST["nome"];
 $preco = $_POST["preco"];
 $descricao= $_POST['descricao'];
+$categorias_id = $_POST['categorias_id'];
 
 
 
 
-if(insereProduto($conexaoComOBancoDeDados, $nome, $preco, $descricao)) { ?>
+if(insereProduto($conexaoComOBancoDeDados, $nome, $preco, $descricao, $categorias_id)) { ?>
 	<p class="text-success">O produto <?= $nome ?>, com o preço de R$ <?= $preco ?> foi adicionando com sucesso.</p>
 <?php } else { 
 	$mensagemErroMySql = mysqli_error($conexaoComOBancoDeDados);

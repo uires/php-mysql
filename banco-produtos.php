@@ -14,8 +14,8 @@ function buscarProdutos($conexaoComOBancoDeDados){
 }
 
 // função para inserção no banco de dados com retorno de uma query executando o procedimento.
-function insereProduto($conexaoComOBancoDeDados, $nome, $preco, $descricao){
-	$query = "insert into produtos (nome, preco, descricao) value ('{$nome}', {$preco}, '{$descricao}')";
+function insereProduto($conexaoComOBancoDeDados, $nome, $preco, $descricao, $categorias_id){
+	$query = "insert into produtos (nome, preco, descricao, categorias_id) value ('{$nome}', {$preco}, '{$descricao}', {$categorias_id})";
 	return mysqli_query($conexaoComOBancoDeDados, $query);
 }	 
 

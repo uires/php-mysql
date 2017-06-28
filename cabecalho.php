@@ -15,6 +15,7 @@
 		 			<li><a href="index.php">Minha Loja</a></li>		
 		 			<li><a href="produto-formulario.php">Adiciona Produtos</a></li>
 		 			<li><a href="produto-lista.php">Lista de Produtos</a></li>
+		 			<li><a href="sobre.php">Sobre Projeto</a></li>
  				</div>
 		 	</div>
 		 </div>
