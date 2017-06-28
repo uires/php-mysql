@@ -8,7 +8,7 @@ $categorias = listaCategorias($conexaoComOBancoDeDados); ?>
 
 	<link href="loja.css" rel="stylesheet">
 
-    <h1>[Formulário(ITENS)]</h1>
+    <h1>Formulário</h1>
 	<form action="adiciona-produto.php" method="post">
 		<table class="table">
     		<tr>
@@ -27,10 +27,13 @@ $categorias = listaCategorias($conexaoComOBancoDeDados); ?>
 		    <tr>
 		    	<td>Categoria</td>
 		    	<td>
-		    		<?php foreach($categorias as $categoria) : ?>
-		    			<input type="radio" name="categoria_id" value="<?=$categoria['id']?>">
-		    			<?=$categoria['nome']?></br>
-		   		 	<?php endforeach ?>
+		    		<select class="form form-control" name="categoria_id">
+			    		<?php foreach($categorias as $categoria) : ?>
+			    			<option value="<?=$categoria['id']?>">
+			    				<?=$categoria['nome']?></br>
+			    			</option>
+			   		 	<?php endforeach ?>
+		   		 	</select>
 		    	</td>
 
 		    </tr>
