@@ -10,9 +10,8 @@
 
 $id = $_GET['id'];
 removeProduto($conexaoComOBancoDeDados, $id);
-
-?>
-<p class="text=success"> Produto com ID: <?=$id?> removido com sucesso! </p>
+header("Location: produto-lista.php");
+die();
 
 <?php
 include("rodape.php");?>
