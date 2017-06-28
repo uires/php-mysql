@@ -10,11 +10,12 @@
 
 $nome = $_GET["nome"];
 $preco = $_GET["preco"];
+$descricao= $_GET['descricao'];
 
 
 
 
-if(insereProduto($conexaoComOBancoDeDados, $nome, $preco)) { ?>
+if(insereProduto($conexaoComOBancoDeDados, $nome, $preco, $descricao)) { ?>
 	<p class="text-success">O produto <?= $nome ?>, com o preço de R$ <?= $preco ?> foi adicionando com sucesso.</p>
 <?php } else { 
 	$mensagemErroMySql = mysqli_error($conexaoComOBancoDeDados);

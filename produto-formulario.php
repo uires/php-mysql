@@ -11,6 +11,11 @@
 		    <tr>   
 		        <td> <h5>Preço</h5></td>
 		        <td> <input class="form-control" type="number" name="preco" step=0.01 ></td>
+
+		    </tr>
+		    <tr>
+		    	<td>Descrição</td>
+		    	<td><textarea name="descricao" class="form form-control"></textarea></td>
 		    </tr>
 		    <tr>
 		    	<td>
