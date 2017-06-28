@@ -25,6 +25,7 @@ $categorias = listaCategorias($conexaoComOBancoDeDados); ?>
 		    	<td><textarea name="descricao" class="form form-control"></textarea></td>
 		    </tr>
 		    <tr>
+
 		    	<td>Categoria</td>
 		    	<td>
 		    		<select class="form form-control" name="categoria_id">

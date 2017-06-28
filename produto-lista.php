@@ -26,7 +26,8 @@ $produtos = buscarProdutos($conexaoComOBancoDeDados);
 			<td>R$ <?=$produto['preco']?> </td>
 			<td>ID: <?=$produto['id']?> </td>
 			<td><?= substr($produto['descricao'],0, 40) ?></td>
-			 <td><?= $produto['categoria_nome'] ?></td>
+			<td><?= $produto['categoria_nome'] ?></td>			
+		   	<td><a class="btn btn-warning" href="altera-produto.php?id=<?=$produto['id']?>">Altera Produto</a>
 			<td>
 				<form action="remove-produto.php" method="post">
 					<input type="hidden" name="id" value="<?=$produto['id']?>" />
