@@ -27,8 +27,10 @@ $produtos = buscarProdutos($conexaoComOBancoDeDados);
 			<td>ID: <?=$produto['id']?> </td>
 			<td><?= substr($produto['descricao'],0, 40) ?></td>
 
-			<td class="danger">  
-				<a href="remove-produto.php?id=<?=$produto['id']?>" class="text-danger">Removedor</a>
+			<td>
+				<form action="remove-produto.php?id=<?=$produto['id']?>" method="post">
+					<button class="btn btn-danger">Removedor</button>
+				</form>
 			</td>
 		</tr>
 <?php // include de rodapé e fechamento da estrutura foreach
