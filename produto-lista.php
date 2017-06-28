@@ -2,21 +2,23 @@
 	<meta charset="UTF-8">
 </html>
 
-<?php include("cabecalho.php");
+<?php
+// inclusão de páginas PHP
+ include("cabecalho.php");
  include("conecta.php"); 
  include("banco-produtos.php");
 // @uthor: uíres
-
+// atribuição de array, para verificar a existência de tal dado 
  if(array_key_exists("removido", $_GET) && $_GET['removido']=='true'){ ?>
  	<p class="alert-success">Produto apagado com sucesso.</p>
 <?php
 }
-
+// função buscar produto com parâmetro, conexão com o banco
 $produtos = buscarProdutos($conexaoComOBancoDeDados);
 ?>
 
 <table class="table table-striped table-bordered">
-<?php
+<?php // foreach para listar informações do banco de dados, utilizando tabela e função substr para limitar caracteres
 	foreach($produtos as $produto) {
 ?>
 		<tr>
@@ -29,7 +31,7 @@ $produtos = buscarProdutos($conexaoComOBancoDeDados);
 				<a href="remove-produto.php?id=<?=$produto['id']?>" class="text-danger">Removedor</a>
 			</td>
 		</tr>
-<?php 
+<?php // include de rodapé e fechamento da estrutura foreach
 	}
 
 ?>

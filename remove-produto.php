@@ -3,7 +3,7 @@
 <?php include("banco-produtos.php");?>
 <?php
 
-//Declarando um função
+
 // @uthor: uíres
 
 

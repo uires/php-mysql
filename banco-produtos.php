@@ -15,7 +15,7 @@ function buscarProdutos($conexaoComOBancoDeDados){
 
 
 function insereProduto($conexaoComOBancoDeDados, $nome, $preco, $descricao){
-	$query = "insert into produtos (nome, preco, descricao) value ('{$nome}', {$preco}, '{descricao}')";
+	$query = "insert into produtos (nome, preco, descricao) value ('{$nome}', {$preco}, '{$descricao}')";
 	return mysqli_query($conexaoComOBancoDeDados, $query);
 }	 
 
