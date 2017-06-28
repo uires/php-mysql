@@ -10,8 +10,8 @@
 
 $id = $_GET['id'];
 removeProduto($conexaoComOBancoDeDados, $id);
-header("Location: produto-lista.php");
+header("Location: produto-lista.php?removido=true");
 die();
 
-<?php
+
 include("rodape.php");?>

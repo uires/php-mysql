@@ -7,7 +7,10 @@
  include("banco-produtos.php");
 // @uthor: uíres
 
- 
+ if(array_key_exists("removido", $_GET) && $_GET['removido']=='true'){ ?>
+ 	<p class="alert-success">Produto apagado com sucesso.</p>
+<?php
+}
 
 $produtos = buscarProdutos($conexaoComOBancoDeDados);
 ?>
