@@ -4,7 +4,7 @@ include("conecta.php");
 include("banco-categoria.php");
 
 $id =$_GET['id'];
-$produto = buscaProduto($conexaoComOBancoDeDados, $id);
+//$produto = buscaProduto($conexaoComOBancoDeDados, $id);
 $categorias = listaCategorias($conexaoComOBancoDeDados); ?>
 
 

@@ -7,7 +7,7 @@
 // @uthor: uíres
 
 
-
+// fornec
 $id = $_POST['id'];
 removeProduto($conexaoComOBancoDeDados, $id);
 header("Location: produto-lista.php?removido=true");
