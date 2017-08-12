@@ -25,14 +25,14 @@ function removeProduto($conexaoComOBancoDeDados, $id){
 	return mysqli_query($conexaoComOBancoDeDados, $query);
 } 
 // função para buscar produto a ser alterado
-function buscaProduto($conexao, $id) {
+function buscaProduto($conexaoComOBancoDeDados, $id) {
     $query = "select * from produtos where id = {$id}";
-    $resultado = mysqli_query($conexao, $query);
+    $resultado = mysqli_query($conexaoComOBancoDeDados, $query);
     return mysqli_fetch_assoc($resultado);
 }
 
-function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id) {
+function alteraProduto($conexaoComOBancoDeDados, $id, $nome, $preco, $descricao, $categoria_id) {
     $query = "update produtos set nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', 
-        categoria_id= {$categoria_id}, where id = '{$id}'";
-    return mysqli_query($conexao, $query);
+        categoria_id= {$categoria_id} where id = '{$id}'";
+    return mysqli_query($conexaoComOBancoDeDados, $query);
 }

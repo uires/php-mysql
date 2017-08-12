@@ -26,6 +26,4 @@ if(insereProduto($conexaoComOBancoDeDados, $nome, $preco, $descricao, $categoria
 }
 
 ?>
-
-
 <?php include("rodape.php"); ?>
