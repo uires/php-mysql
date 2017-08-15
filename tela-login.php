@@ -1,10 +1,11 @@
 <?php
 include("conceta.php");
-
-$email= $_POST['email'];
-$senha= $_POST['senha'];
+include("banco_usuarios.php");
 
 
-function loginNaIndex($conexaoComOBancoDeDados, $query){
+$usuario = ($conexaoComOBancoDeDados, $_POST["email"], $_POST["senha"]);
+echo $usuario;
 
-}
+
+
+die();
