@@ -8,7 +8,7 @@ include("conecta.php");
 	
 	<form action="tela-login.php" method="post">
 		<table class="table">
-		
+			
 			<tr>			
 				<td>Email: </td> 
 				<td><input class="form-control" type="text" name="usuario-login-email"></td>
@@ -25,6 +25,11 @@ include("conecta.php");
 	</form>
 	
 
+<?php
+// teste 
+$a = array(3, 12301, 11, 420);
+echo "soma(a) = ".array_sum($a)."\n";
+?>
 
 	
 
