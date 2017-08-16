@@ -25,13 +25,6 @@ include("conecta.php");
 	</form>
 	
 
-<?php
-// teste 
-$a = array(3, 12301, 11, 420);
-echo "soma(a) = ".array_sum($a)."\n";
-?>
-
-	
 
 <?php include("rodape.php"); ?>
 	       	
