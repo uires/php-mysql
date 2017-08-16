@@ -19,9 +19,10 @@
 				<td><input class="form-control" type="text" name="email"></td>
 			</tr>
 			<tr>	
-				<td>Senha: </td>
+				<td>Senha:<br> </td>
 				<td><input class="form-control" type="password" name="senha"></td>
 			</tr>
+
 			<tr>
 				<td><button class= "btn btn-primary" type="submit">Logar</button></td>
 			</tr>
@@ -37,24 +38,11 @@
 }else {
 	
 	if (isset($_GET["tela-login"]) && $_GET["tela-login"] == false){?>
-		<p class= "alert-danger">Usuário ou senha inválido</p>
+		<p class= "alert-success">Usuário ou senha inválido</p>
 		<?php
 	}
 }
 ?> 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
