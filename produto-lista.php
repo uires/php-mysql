@@ -16,11 +16,14 @@
 // função buscar produto com parâmetro, conexão com o banco
 $produtos = buscarProdutos($conexaoComOBancoDeDados);
 ?>
-
+<?php
+	if (!isset($_COOKIE["user_login"])) {
+		header("Location: index.php");
+	}
+	?>
 <table class="table table-striped table-bordered">
 <?php // foreach para listar informações do banco de dados, utilizando tabela e função substr para limitar caracteres
-	if (isset($_COOKIE["user_login"])) {
-		foreach($produtos as $produto) {?>
+			foreach($produtos as $produto) {?>
 			<tr>
 				<td><?=$produto['nome']?> </td>
 				<td>R$ <?=$produto['preco']?> </td>
