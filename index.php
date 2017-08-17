@@ -15,7 +15,7 @@
 
 
 	<link href="css/loja.css" rel="stylesheet">
-	<h1 class>Olá, para ter acesso ao formulário de adicionar itens você precisa logar!</h1>
+	<h1 class>Olá, para ter acesso ao formulário de adicionar e ou listagem de produtos, você precisa logar!</h1>
 	
 	<form action="tela-login.php" method="post">
 		<table class="table">
