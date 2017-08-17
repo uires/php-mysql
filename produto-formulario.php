@@ -7,7 +7,9 @@ $categorias = listaCategorias($conexaoComOBancoDeDados); ?>
 
 
 	<link href="loja.css" rel="stylesheet">
-
+	<?php  
+	if(isset($_COOKIE["user_login"])){
+	?>	
     <h1>Formulário</h1>
 	<form action="adiciona-produto.php" method="post">
 		<table class="table">
@@ -46,5 +48,8 @@ $categorias = listaCategorias($conexaoComOBancoDeDados); ?>
 		    </tr>
         </table>
     </form>
+    <?php }else{
+    	header("Location: index.php?tela-login.php");
+    }?>
 
 <?php include("rodape.php"); ?>
