@@ -1,0 +1,2 @@
+<?php
+ $userCookie= $_COOKIE
