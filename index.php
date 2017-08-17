@@ -7,6 +7,12 @@
 
 
 
+<?php if(isset($_COOKIE["user_login"]	)){ ?>
+		<p class="alert-success"> Você está logado como <?=$_COOKIE["user_login"]?></p>
+	<?php
+	} else{
+	?>
+
 
 	<link href="css/loja.css" rel="stylesheet">
 	<h1 class>Bem vindo!</h1>
@@ -29,25 +35,23 @@
 
 		</table>
 	</form>
-	
+	<?php
+	}
+	?>
 
 
-<?php if(isset($_GET["tela-login"]) && $_GET["tela-login"] == true) {?>
+<?php 
+if(isset($_GET["tela-login"]) && $_GET["tela-login"] == true) {?>
 	<p class="alert-success">Logado com sucesso</p>
 <?php
 }else {
 	
 	if (isset($_GET["tela-login"]) && $_GET["tela-login"] == false){?>
-		<p class= "alert-success">Usuário ou senha inválido</p>
+		<p class= "alert-danger">Usuário ou senha inválido</p>
 		<?php
 	}
 }
 ?> 
-
-
-
-
-
 
 
 
