@@ -7,10 +7,10 @@
 
 
 
-<?php if(isset($_COOKIE["user_login"]	)){ ?>
+<?php if(isset($_COOKIE["user_login"])AND empty($_COOKIE["user_login"]) == false){ ?>
 		<p class="alert-success"> Você está logado como <?=$_COOKIE["user_login"]?></p>
 	<?php
-	} else{
+	}else{
 	?>
 
 
